@@ -1,0 +1,90 @@
+.web-title {
+  font-size: 38px;
+  font-family: serif;
+  font-weight: 600;
+  position: absolute;
+  left: 42%;
+}
+
+.all-header-elements {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.home-page-buttons {
+  font-size: 14px;
+  font-family: sans-serif;
+  color: #03a87c;
+  position: absolute;
+  right: 50px;
+  top: 26px;
+
+
+}
+
+.home-signup-button {
+  border: 1px;
+  border-style: solid;
+  border-color: #03a87c;
+  border-radius: 4px;
+  margin-right: 5%;
+  padding: 10px 18px;
+
+}
+
+.home-login-button {
+  margin-right: 5px;
+  padding: 10px 18px;
+}
+
+.home {
+  margin: 0;
+}
+
+.x-button {
+  float: right;
+  font-size: 50px;
+  margin-top: 5px;
+}
+
+.credential-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 200px;
+  margin-top: 150px;
+}
+
+.submit-signin-signup-button {
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+.input-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.signin-login-input-box {
+  margin-top: 15px;
+}
+
+.sign-out-button {
+  border: 1px;
+  border-style: solid;
+  border-color: #03a87c;
+  border-radius: 4px;
+  padding: 10px 18px;
+  margin-right: 8%;
+  float: right;
+  margin-top: 1%;
+
+
+}
+
+
+.article-index-temp {
+
+}

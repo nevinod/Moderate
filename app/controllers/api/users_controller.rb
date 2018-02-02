@@ -11,10 +11,14 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def show
+    render json: ["You logged in. You're at the users show page, api/users/show"]
+  end
+
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:username, :password, :email)
   end
 
 end
