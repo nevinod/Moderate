@@ -1,24 +1,8 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# MODERATE
 
-Things you may want to cover:
+Description:
 
-* Ruby version
+Moderate is an online publishing platform which has a collection of articles written by both amateur and professional writers.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Please check the wiki for more info
