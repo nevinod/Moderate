@@ -42,6 +42,24 @@ class Signin extends React.Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors()
+  }
+
+  renderErrors() {
+    return(
+      <ul>
+        {
+          this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))
+        }
+      </ul>
+    )
+  }
+
   handleInput(type) {
     return (e) => {
       this.setState({ [type]: e.target.value })
@@ -88,6 +106,7 @@ class Signin extends React.Component {
             <h3 className="signup-login-header">Sign in with email</h3>
 
               <form className = "credential-form">
+                {this.renderErrors()}
                 <label class="input-title" >Username:
                   <input
                     type="text"

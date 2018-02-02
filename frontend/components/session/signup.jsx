@@ -43,6 +43,24 @@ class Signup extends React.Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors()
+  }
+
+  renderErrors() {
+    return(
+      <ul>
+        {
+          this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))
+        }
+      </ul>
+    )
+  }
+
   handleInput(type) {
     return (e) => {
       this.setState({ [type]: e.target.value })
@@ -85,6 +103,7 @@ class Signup extends React.Component {
           <button className="x-button" onClick={this.closeModal}>&times;</button>
 
             <form className="credential-form">
+              {this.renderErrors()}
               <label class="input-title">Username:
                 <input
                   type="text"
