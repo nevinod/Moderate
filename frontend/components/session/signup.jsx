@@ -8,22 +8,21 @@ const customStyles = {
     left: 0,
     right: 0,
     bottom: 0,
-    background: 'rgba(255,255,255,.65)'
+    backgroundColor: 'rgba(255,255,255,.65)'
   },
   content : {
-    position: 'absolute',
-    top: '140px',
-    bottom: '170px',
-    left: '270px',
-    right: '270px',
-    margin: 'auto',
+    position: 'abolute',
+    height: '50%',
+    width: '40%',
+    marginLeft: '30%',
+    marginTop: '10%',
     border: '0',
     background: '#E8F3EC',
     overflow: 'auto',
     WebkitOverflowScrolling: 'touch',
     borderRadius: '5px',
     outline: 'none',
-    boxShadow: '0 2px 10px rgba(0,0,0,.15)',
+    boxShadow: '0 10px 16px rgba(0,0,0,.35)',
 
   }
 };
@@ -101,10 +100,10 @@ class Signup extends React.Component {
 
           <h2 ref={subtitle => this.subtitle = subtitle}></h2>
           <button className="x-button" onClick={this.closeModal}>&times;</button>
-
+          <h3 className="signup-signin-header">Join Medium</h3>
             <form className="credential-form">
               {this.renderErrors()}
-              <label class="input-title">Username:
+              <label class="input-title">Username
                 <input
                   type="text"
                   value={this.state.username}
@@ -113,7 +112,7 @@ class Signup extends React.Component {
                 />
               </label>
 
-              <label class="input-title">Email:
+              <label class="input-title">Email
                 <input
                   type="text"
                   value={this.state.email}
@@ -122,7 +121,7 @@ class Signup extends React.Component {
                 />
               </label>
 
-              <label class="input-title">Password:
+              <label class="input-title">Password
                 <input
                   type="password"
                   value={this.state.password}

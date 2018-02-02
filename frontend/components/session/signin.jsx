@@ -11,19 +11,19 @@ const customStyles = {
     backgroundColor: 'rgba(255,255,255,.65)'
   },
   content : {
-    position: 'absolute',
-    top: '140px',
-    bottom: '170px',
-    left: '270px',
-    right: '270px',
-    margin: 'auto',
+    position: 'abolute',
+    height: '50%',
+    width: '40%',
+    marginLeft: '30%',
+    marginTop: '10%',
     border: '0',
     background: '#D7EFEE',
     overflow: 'auto',
     WebkitOverflowScrolling: 'touch',
     borderRadius: '5px',
     outline: 'none',
-    boxShadow: '0 2px 10px rgba(0,0,0,.15)'
+    boxShadow: '0 10px 16px rgba(0,0,0,.35)',
+
   }
 };
 
@@ -91,7 +91,7 @@ class Signin extends React.Component {
 
   render() {
     return (
-      <div >
+      <div className="modal-div">
           <Modal
             isOpen={this.state.modalIsOpen}
             onAfterOpen={this.afterOpenModal}
@@ -103,20 +103,23 @@ class Signin extends React.Component {
 
             <h2 ref={subtitle => this.subtitle = subtitle}></h2>
             <button className="x-button" onClick={this.closeModal}>&times;</button>
-            <h3 className="signup-login-header">Sign in with email</h3>
+            <h3 className="signup-signin-header">Sign in with email</h3>
 
               <form className = "credential-form">
                 {this.renderErrors()}
-                <label class="input-title" >Username:
-                  <input
-                    type="text"
-                    value={this.state.username}
-                    onChange={this.handleInput('username')}
-                    class="signin-login-input-box"
-                  />
+                <label class="input-title" >Username
+                  <div class="wrapper">
+                    <input
+                      type="text"
+                      value={this.state.username}
+                      onChange={this.handleInput('username')}
+                      class="signin-login-input-box"
+                    />
+                    <span class="underline"></span>
+                  </div>
                 </label>
 
-                <label class="input-title">Password:
+                <label class="input-title">Password
                   <input
                     type="password"
                     value={this.state.password}

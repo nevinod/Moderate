@@ -1,5 +1,5 @@
 {
-  "name": "Medium",
+  "name": "Moderate",
   "private": true,
   "dependencies": {
     "babel-core": "^6.26.0",
