@@ -42,24 +42,6 @@ class Signup extends React.Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
-  componentWillUnmount() {
-    this.props.clearErrors()
-  }
-
-  renderErrors() {
-    return(
-      <ul>
-        {
-          this.props.errors.map((error, i) => (
-            <li key={`error-${i}`}>
-              {error}
-            </li>
-          ))
-        }
-      </ul>
-    )
-  }
-
   handleInput(type) {
     return (e) => {
       this.setState({ [type]: e.target.value })
@@ -68,7 +50,10 @@ class Signup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    this.props.createNewUser(this.state)
+    this.props.createNewUser({
+      username: this.state.username,
+      email: this.state.email,
+      password: this.state.password })
       .then(() => this.props.history.push('/articles'))
   }
 
@@ -102,7 +87,6 @@ class Signup extends React.Component {
           <button className="x-button" onClick={this.closeModal}>&times;</button>
           <h3 className="signup-signin-header">Join Medium</h3>
             <form className="credential-form">
-              {this.renderErrors()}
               <label class="input-title">Username
                 <input
                   type="text"
