@@ -9,7 +9,14 @@ export default ({ currentUser, signOut }) => {
   if(currentUser) {
     return (
       <div>
-        <button className="sign-out-button" onClick={signOut}>Sign Out</button>
+        <div className="home">
+          <div className="all-header-elements">
+            <h1 className="web-title">Moderate</h1>
+            <div className="home-page-buttons">
+              <button className="home-signup-button" onClick={signOut}>Leave</button>
+            </div>
+          </div>
+        </div>
       </div>
     )
 
