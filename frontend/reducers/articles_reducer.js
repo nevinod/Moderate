@@ -8,7 +8,7 @@ const articlesReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_ARTICLES:
-      return action.benches
+      return action.articles
     case RECEIVE_ARTICLE:
       return merge({}, state, {[action.article.id]: action.article})
     case REMOVE_ARTICLE:
@@ -20,4 +20,4 @@ const articlesReducer = (state = {}, action) => {
   }
 };
 
-export default articlesReducer;
+export default articlesReducer

@@ -1,14 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { signOut } from '../../actions/session_actions';
+import { fetchArticles, deleteArticles } from '../../actions/article_actions'
 import ArticleIndex from './article_index'
 
-const mapStateToProps = state => (
-  {currentUser: state.session.currentUser}
-)
+const mapStateToProps = state => ({
+  currentUser: state.session.currentUser,
+  articles: Object.values(state.articles)
+})
 
 const mapDispatchToProps = dispatch => ({
-  signOut: () => dispatch(signOut())
+  fetchArticles: () => dispatch(fetchArticles()),
+  deleteArticle: (articleId) => dispatch(deleteArticle(articleId))
 });
 
 export default connect(

@@ -28,7 +28,7 @@ class ArticleIndex extends React.Component {
               this.props.articles.map(article => (
                 <ArticleIndexItem
                   key={article.id}
-                  deleteEvent={this.props.deleteArticle}
+                  deleteArticle={this.props.deleteArticle}
                   article={article} />
               ))
             }
