@@ -94,7 +94,7 @@ class Signin extends React.Component {
                       type="text"
                       value={this.state.username}
                       onChange={this.handleInput('username')}
-                      class="signin-login-input-box"
+                      className="signin-login-input-box"
                     />
                     <span class="underline"></span>
                   </div>
@@ -105,7 +105,7 @@ class Signin extends React.Component {
                     type="password"
                     value={this.state.password}
                     onChange={this.handleInput('password')}
-                    class="signin-login-input-box"
+                    className="signin-login-input-box"
                   />
                 </label>
                 <button className="submit-signin-signup-button" onClick={this.handleSubmit} >Login</button>

@@ -33,6 +33,12 @@ export default ({ currentUser, signOut }) => {
           </div>
         </div>
 
+        
+
+
+
+
+
       </div>
     )
 
