@@ -1,12 +1,12 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { fetchArticles, deleteArticles } from '../../actions/article_actions'
-import ArticleIndex from './article_index'
+import React from 'react';
+import { connect } from 'react-redux';
+import { fetchArticles, deleteArticle } from '../../actions/article_actions';
+import ArticleIndex from './article_index';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
   articles: Object.values(state.articles)
-})
+});
 
 const mapDispatchToProps = dispatch => ({
   fetchArticles: () => dispatch(fetchArticles()),
@@ -16,4 +16,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ArticleIndex)
+)(ArticleIndex);
