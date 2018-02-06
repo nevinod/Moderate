@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom'
 import * as SessionUtil from './util/session_api_util'
 import Root from './components/root'
 import configureStore from './store/store'
+import fetchArticles from './actions/article_actions'
 
 
 document.addEventListener("DOMContentLoaded", () => {
   window.login = SessionUtil.login
   window.signup = SessionUtil.signup
   window.logout = SessionUtil.logout
+  window.fetchArticles = fetchArticles
   let store;
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } };

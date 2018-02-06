@@ -1,4 +1,6 @@
 import React from 'react'
+import ArticleIndexItem from './article_index_item';
+
 
 class ArticleIndex extends React.Component {
   constructor(props) {
@@ -21,6 +23,17 @@ class ArticleIndex extends React.Component {
       return (
 
         <div className="article-index-temp">
+          <ul>
+            {
+              this.props.articles.map(article => (
+                <ArticleIndexItem
+                  key={article.id}
+                  deleteEvent={this.props.deleteArticle}
+                  article={article} />
+              ))
+            }
+          </ul>
+          <Link to="/articles/new">Form</Link>
         </div>
       )
     }
