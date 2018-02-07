@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180202233311) do
+ActiveRecord::Schema.define(version: 20180207185644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 20180202233311) do
     t.string "body"
     t.string "cover_img_url"
     t.string "time_length"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.string "user_id"
+    t.string "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
