@@ -44,7 +44,7 @@ class Home extends React.Component {
               <h1>What's Popular</h1>
               <br></br>
             </div>
-            <Link className="new-article-button" to="/articles/new">Write an Article!</Link>
+            <Link className="new-article-button" to="/login">Sign in to Write an Article!</Link>
             <ul className="container">
               {
                 this.props.articles.map(article => (

@@ -5,7 +5,7 @@ import ArticleShow from './article_show'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    article: state.entities.articles[ownProps.match.params.id]
+    article: state.entities.articles[ownProps.match.params.articleId]
   }
 };
 

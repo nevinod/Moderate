@@ -5,21 +5,22 @@ import { fetchArticle } from '../../actions/article_actions'
 class ArticleShow extends React.Component {
   componentDidMount() {
     if (this.props.article) {
-      this.props.fetchArticle(this.props.article.id)
+      this.props.fetchArticle(this.props.article.articleId)
     }
   }
 
-  render(){
-    return (
-      <div></div>
-    )
+  render()  {
     const article = this.props.article
-    return(
-      <div>
-        <h1>{article.title}</h1>
-        <p>{article.body}</p>
-        <Link to="/">See all articles</Link>
+    return (
+      <div className="show-page">
+        <div className="show-buttons">
+          <Link className="link-to-index" to="/">See all articles</Link>
+          <button className="like-article" onClick={() => deleteArticle(article.id)}>Like</button>
+        </div>
 
+        <img className="show-image" src={article.cover_img_url}></img>
+        <p className="show-title">{article.title}</p>
+        <p className="show-body">{article.body}</p>
       </div>
     );
   }
