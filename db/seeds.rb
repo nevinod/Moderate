@@ -44,3 +44,14 @@ First, the top-line results: Just as one would expect, the more communitarian-mi
 
 Article.create(title: "How to Make a Website", body: "First, you need a domain and a name. Then, you need content to fill up the website with. Lastly, you must join AppAcademy.",
 cover_img_url: "https://cdn.lynda.com/course/83603/83603-636216266356158373-16x9.jpg")
+
+Article.create(title: "The Ten Commandments", body: "You shall have no other gods before Me.
+You shall not make idols.
+You shall not take the name of the LORD your God in vain.
+Remember the Sabbath day, to keep it holy.
+Honor your father and your mother.
+You shall not murder.
+You shall not commit adultery.
+You shall not steal.
+You shall not bear false witness against your neighbor.
+You shall not covet.", cover_img_url: "https://www.breakingisraelnews.com/wp-content/uploads/2016/06/10-ten-commandments-bible.jpg")
