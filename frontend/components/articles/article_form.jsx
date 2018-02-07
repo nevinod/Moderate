@@ -7,12 +7,6 @@ class ArticleForm extends React.Component {
     this.state = this.props.article
   }
 
-  componentDidMount() {
-    if(this.props.match.params.id) {
-      this.props.fetchArticle(this.props.match.params.id)
-    }
-  }
-
   componentWillReceiveProps(newProps) {
     this.setState(newProps.article)
   }
@@ -25,13 +19,12 @@ class ArticleForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    this.props.action(this.state).then(() => this.props.history.push('/articles'))
+    this.props.action(this.state).then(() => this.props.history.push('/'))
   }
 
   render() {
     const text = "Create Article"
     console.log(this);
-    // if(currentUser) {
       return (
         <div>
 

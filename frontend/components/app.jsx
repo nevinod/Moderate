@@ -15,7 +15,7 @@ export default () => (
     <Route exact path='/articles' component={HomeContainer} />
     <Route exact path='/articles' component={ArticleIndexContainer} />
     <Route exact path='/articles/new' component={ArticleFormContainer} />
-    <Route path='/articles/:articleId' component={ArticleShowContainer} />
+    <Route exact path='/articles/:articleId' component={ArticleShowContainer} />
     <AuthRoute path='/signup' component={SignupContainer} />
     <Route exact path='/signup' component={HomeContainer} />
     <AuthRoute path='/login' component={SigninContainer} />
