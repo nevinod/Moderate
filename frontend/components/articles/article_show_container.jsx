@@ -1,10 +1,13 @@
+import React from 'react'
 import { connect } from 'react-redux'
 import { fetchArticle } from '../../actions/article_actions'
 import ArticleShow from './article_show'
 
-const mapStateToProps = state => ({
-  article: state.articles[ownProps.match.params.articleId]
-});
+const mapStateToProps = (state, ownProps) => {
+  return {
+    article: state.entities.articles[ownProps.match.params.id]
+  }
+};
 
 const mapDispatchToProps = dispatch => ({
   fetchArticle: id => dispatch(fetchArticle(id))

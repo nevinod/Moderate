@@ -35,36 +35,41 @@ class ArticleForm extends React.Component {
         <div>
 
           <form className="create-article-form" onSubmit={this.handleSubmit}>
-            <h3>{text}</h3>
-            <label>Title
-              <input
-                type="text"
-                className="create-input"
-                value={this.state.title}
-                onChange={this.update('title')} />
-            </label>
+            <h3 className="new-or-edit-title">{text}</h3>
+              <label>
+                <input
+                  type="text"
+                  className="create-input-title"
+                  value={this.state.title}
+                  onChange={this.update('title')}
+                  placeholder="Title" />
+              </label>
 
-            <label>Body
-              <textarea
-                value={this.state.body}
-                className="create-input"
-                onChange={this.update('body')} />
-            </label>
+              <label>
+                <textarea
+                  rows="10"
+                  cols="75"
+                  value={this.state.body}
+                  className="create-input-body-and-image"
+                  onChange={this.update('body')}
+                  placeholder="Body" />
+              </label>
 
-            <label>URL of Image
-              <textarea
-                value={this.state.cover_img_url}
-                className="create-input"
-                onChange={this.update('cover_img_url')} />
-            </label>
+              <label>
+                <textarea
+                  rows="2"
+                  cols="75"
+                  value={this.state.cover_img_url}
+                  className="create-input-body-and-image"
+                  onChange={this.update('cover_img_url')}
+                  placeholder="Image URL" />
+              </label>
 
-            <input type="submit" className="create-article-button" value={text} />
+              <input type="submit" className="create-article-button" value={text} />
           </form>
         </div>
       )
-    // } else {
-    //   this.props.history.push('/')
-    // }
+
   }
 }
 
