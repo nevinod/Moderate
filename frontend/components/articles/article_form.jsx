@@ -29,10 +29,12 @@ class ArticleForm extends React.Component {
   }
 
   render() {
-    const text = this.props.formType === 'new' ? "Create Article" : "Update Article"
+    const text = "Create Article"
+    console.log(this);
     // if(currentUser) {
       return (
         <div>
+
 
           <form className="create-article-form" onSubmit={this.handleSubmit}>
             <h3 className="new-or-edit-title">{text}</h3>

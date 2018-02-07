@@ -41,19 +41,7 @@ class ArticleIndex extends React.Component {
 
       this.props.history.push('/')
       return (
-        <div className="article-index-temp">
-          <ul>
-            {
-              this.props.articles.map(article => (
-                <ArticleIndexItem
-                  key={article.id}
-                  deleteArticle={this.props.deleteArticle}
-                  article={article} />
-              ))
-            }
-          </ul>
-          <Link  to="/articles/new">Form</Link>
-        </div>
+        <div className="article-index-temp"></div>
       )
     }
   }

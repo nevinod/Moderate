@@ -11,11 +11,14 @@ import ArticleShowContainer from './articles/article_show_container'
 
 export default () => (
   <div>
-    <HomeContainer />
+    <Route exact path='/' component={HomeContainer} />
+    <Route exact path='/articles' component={HomeContainer} />
     <Route exact path='/articles' component={ArticleIndexContainer} />
     <Route exact path='/articles/new' component={ArticleFormContainer} />
-    // <Route exact path='/articles/:articleId' component={ArticleShowContainer} />
+    <Route path='/articles/:articleId' component={ArticleShowContainer} />
     <AuthRoute path='/signup' component={SignupContainer} />
+    <Route exact path='/signup' component={HomeContainer} />
     <AuthRoute path='/login' component={SigninContainer} />
+    <Route exact path='/login' component={HomeContainer} />
   </div>
 )

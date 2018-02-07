@@ -15,9 +15,9 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  const action = ownProps.match.path === "/" ? createArticle : updateArticle;
+  const action = createArticle;
   return {
-    fetchArticle: id => dispatch(fetchArticle(id)),
+    createArticle: article => dispatch(createArticle(article)),
     action: article => dispatch(action(article))
   };
 };
