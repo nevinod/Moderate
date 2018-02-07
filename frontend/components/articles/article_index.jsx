@@ -11,7 +11,7 @@ class ArticleIndex extends React.Component {
   }
 
   render() {
-    // this.props.articles = this.props.fetchArticles();
+
     if(this.props.currentUser) {
       return (
         <div>
@@ -28,7 +28,8 @@ class ArticleIndex extends React.Component {
                   <ArticleIndexItem
                     key={article.id}
                     deleteArticle={this.props.deleteArticle}
-                    article={article} />
+                    article={article}
+                    blurb={article.body.split(/\s+/).slice(0,20).join(" ")}/>
                 ))
               }
             </ul>

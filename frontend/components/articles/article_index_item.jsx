@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const ArticleIndexItem = ({article, deleteArticle}) => (
+const ArticleIndexItem = ({article, deleteArticle, blurb}) => (
   <li className = "article-preview">
     <div className="title-body-wrapper">
       <Link className = "article-preview-title" to={`/articles/${article.id}`}>{article.title}</Link>
-      <p className="article-preview-body">{article.body}</p>
+      <p className="article-preview-body">{`${blurb}...`}</p>
     </div>
     <img className="index-item-image" src={`${article.cover_img_url}`} />
 
