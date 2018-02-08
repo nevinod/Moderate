@@ -16,7 +16,7 @@ export const updateArticle = (article) => {
 }
 
 
-export const deleteArticles = (id) => {
+export const deleteArticle = (id) => {
   return $.ajax({
     method: "DELETE",
     url: `/api/articles/${id}`

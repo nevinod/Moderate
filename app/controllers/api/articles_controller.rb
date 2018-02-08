@@ -1,5 +1,7 @@
 class Api::ArticlesController < ApplicationController
 
+  before_action :require_login, only: [:create]
+
   def index
     @articles = Article.all
   end
@@ -10,7 +12,8 @@ class Api::ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    if @article.save
+
+    if @article.save!
       render :show
     else
       render json: @article.errors.full_messages, status: 422
@@ -36,6 +39,6 @@ class Api::ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :body, :time_length, :cover_img_url)
+    params.require(:article).permit(:title, :body, :time_length, :cover_img_url, :user_id)
   end
 end
