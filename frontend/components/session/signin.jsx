@@ -51,9 +51,8 @@ class Signin extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    console.log(this.state);
     this.props.signIn(this.state)
-      .then(() => this.props.history.push('/articles'))
+      .then(() => this.props.history.push('/articles'), )
   }
 
   demoLogin(e) {
@@ -78,15 +77,16 @@ class Signin extends React.Component {
   }
 
   renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
+    // console.log(this.props);
+    // return(
+    //   <ul>
+    //     {this.props.errors.map((error, i) => (
+    //       <li key={`error-${i}`}>
+    //         {error}
+    //       </li>
+    //     ))}
+    //   </ul>
+    // );
   }
 
 
