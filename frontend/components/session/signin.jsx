@@ -40,6 +40,7 @@ class Signin extends React.Component {
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   handleInput(type) {
@@ -50,7 +51,14 @@ class Signin extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
+    console.log(this.state);
     this.props.signIn(this.state)
+      .then(() => this.props.history.push('/articles'))
+  }
+
+  demoLogin(e) {
+    e.preventDefault()
+    this.props.signIn({username: "prich", password: "123456"})
       .then(() => this.props.history.push('/articles'))
   }
 
@@ -109,6 +117,7 @@ class Signin extends React.Component {
                   />
                 </label>
                 <button className="submit-signin-signup-button" onClick={this.handleSubmit} >Login</button>
+                <button className="submit-signin-signup-button" onClick={this.demoLogin}>Demo Login</button>
               </form>
           </Modal>
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import SignupContainer from './session/signup_container'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import HomeContainer from './home/home_container'
 import ArticleIndexContainer from './articles/article_index_container'
 import SigninContainer from './session/signin_container'
@@ -14,11 +14,14 @@ export default () => (
     <Route exact path='/' component={HomeContainer} />
     <Route exact path='/articles' component={HomeContainer} />
     <Route exact path='/articles' component={ArticleIndexContainer} />
-    <Route exact path='/articles/new' component={ArticleFormContainer} />
-    <Route exact path='/articles/:articleId' component={ArticleShowContainer} />
     <AuthRoute path='/signup' component={SignupContainer} />
     <Route exact path='/signup' component={HomeContainer} />
     <AuthRoute path='/login' component={SigninContainer} />
     <Route exact path='/login' component={HomeContainer} />
+
+    <Switch>
+      <Route exact path='/articles/new' component={ArticleFormContainer} />
+      <Route exact path='/articles/:articleId' component={ArticleShowContainer} />
+    </Switch>
   </div>
 )

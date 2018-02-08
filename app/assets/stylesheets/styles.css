@@ -134,7 +134,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .article-preview-title {

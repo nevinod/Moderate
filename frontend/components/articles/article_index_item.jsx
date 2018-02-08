@@ -9,7 +9,6 @@ const ArticleIndexItem = ({article, deleteArticle, blurb}) => (
       <p className="article-preview-body">{`${blurb}...`}</p>
     </div>
     <img className="index-item-image" src={`${article.cover_img_url}`} />
-
     {/*<button onClick={() => deleteArticle(article.id)}>Delete</button>*/}
 
   </li>

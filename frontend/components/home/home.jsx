@@ -50,7 +50,6 @@ class Home extends React.Component {
                 this.props.articles.map(article => (
                   <ArticleIndexItem
                     key={article.id}
-                    deleteArticle={this.props.deleteArticle}
                     article={article}
                     blurb={article.body.split(/\s+/).slice(0,20).join(" ")}/>
                 ))

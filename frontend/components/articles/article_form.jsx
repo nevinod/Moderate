@@ -19,12 +19,11 @@ class ArticleForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    this.props.action(this.state).then(() => this.props.history.push('/'))
+    this.props.action(this.state).then((arg) => this.props.history.push(`/articles/${arg.article.id}`))
   }
 
   render() {
     const text = "Create Article"
-    console.log(this);
       return (
         <div>
 

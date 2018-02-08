@@ -26,7 +26,7 @@ export const deleteArticles = (id) => {
 export const createArticle = (article) => {
   return $.ajax({
     method: "POST",
-    url: "api/articles/",
+    url: "api/articles",
     data: { article }
   })
 }
@@ -36,5 +36,12 @@ export const fetchArticle = (id) => {
   return $.ajax({
     method: "GET",
     url: `/api/articles/${id}`
+  })
+}
+
+export const likeArticle = id => {
+  return $.ajax({
+    method: "POST",
+    url: `/api/users/:user_id/likes`
   })
 }

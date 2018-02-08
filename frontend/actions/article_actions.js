@@ -29,7 +29,7 @@ export const fetchArticle = (id) => dispatch => (
 
 export const updateArticle = article => dispatch => (
   APIUtil.updateArticle(article).then(article => (dispatch(receiveArticle(article))))
-)
+);
 
 export const createArticle = (article) => dispatch => (
   APIUtil.createArticle(article).then(article => (dispatch(receiveArticle(article))))
@@ -37,4 +37,8 @@ export const createArticle = (article) => dispatch => (
 
 export const deleteArticle = id => dispatch => (
   APIUtil.deleteArticle(id).then(articleId => (dispatch(removeArticle(articleId))))
+);
+
+export const likeArticle = id => dispatch => (
+  APIUtil.likeArticle(id).then(article => dispatch(receiveArticle(article)))
 );

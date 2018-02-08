@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { fetchArticle } from '../../actions/article_actions'
 import ArticleShow from './article_show'
+import { likeArticle } from '../../actions/article_actions'
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -10,7 +11,9 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchArticle: id => dispatch(fetchArticle(id))
+  fetchArticle: id => dispatch(fetchArticle(id)),
+  likeArticle: id => dispatch(likeArticle(id))
+
 });
 
 export default connect(

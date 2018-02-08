@@ -6,12 +6,8 @@ import { fetchArticle, createArticle, updateArticle } from '../../actions/articl
 
 const mapStateToProps = (state, ownProps) => {
   let article = { title: "", body: "" };
-  let formType = "new";
-  if (ownProps.match.path == "/articles/:id/edit") {
-    article = state.articles[ownProps.match.params.id];
-    formType = "edit";
-  }
-  return { article, formType };
+  // let formType = "new";
+  return { article };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {

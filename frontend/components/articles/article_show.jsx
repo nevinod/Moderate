@@ -15,8 +15,7 @@ class ArticleShow extends React.Component {
       return (
         <div className="show-page">
           <div className="show-buttons">
-            <Link className="link-to-index" to="/">See all articles</Link>
-            <button className="like-article" onClick={() => deleteArticle(article.id)}>Like</button>
+            <Link className="link-to-index" to="/articles">See all articles</Link>
           </div>
 
           <img className="show-image" src={article.cover_img_url}></img>
