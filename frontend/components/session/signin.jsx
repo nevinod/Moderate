@@ -77,16 +77,16 @@ class Signin extends React.Component {
   }
 
   renderErrors() {
-    // console.log(this.props);
-    // return(
-    //   <ul>
-    //     {this.props.errors.map((error, i) => (
-    //       <li key={`error-${i}`}>
-    //         {error}
-    //       </li>
-    //     ))}
-    //   </ul>
-    // );
+    console.log(this.props);
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
 
