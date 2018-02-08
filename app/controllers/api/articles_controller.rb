@@ -12,6 +12,7 @@ class Api::ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    @article.user = current_user
 
     if @article.save!
       render :show
@@ -39,6 +40,6 @@ class Api::ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :body, :time_length, :cover_img_url, :user_id)
+    params.require(:article).permit(:title, :body, :time_length, :cover_img_url)
   end
 end

@@ -6,7 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Article.create(title: 'Fear not, China is not banning cryptocurrency', body: "In 2008 following the financial crisis, a paper titled “Bitcoin: A Peer-to-Peer Electronic Cash System” was published, detailing the concepts of a payment system. Bitcoin was born. Bitcoin gained the attention of the world for its use of blockchain technology and as an alternative to fiat currencies and commodities. Dubbed the next best technology after the internet, blockchain offered solutions to issues we have failed to address, or ignored over the past few decades. I will not delve into the technical aspect of it but here are some articles and videos that I recommend:
+user1 = User.create!(username: "prich", email: "gmail.com", password: "123456")
+
+Article.create(user_id: user1.id, title: 'Fear not, China is not banning cryptocurrency', body: "In 2008 following the financial crisis, a paper titled “Bitcoin: A Peer-to-Peer Electronic Cash System” was published, detailing the concepts of a payment system. Bitcoin was born. Bitcoin gained the attention of the world for its use of blockchain technology and as an alternative to fiat currencies and commodities. Dubbed the next best technology after the internet, blockchain offered solutions to issues we have failed to address, or ignored over the past few decades. I will not delve into the technical aspect of it but here are some articles and videos that I recommend:
 
 How Bitcoin Works Under the Hood
 
@@ -34,7 +36,7 @@ Despite the notice being dated in 2013, it is still relevant with regards to the
 
 A similar notice was issued on Jan 2017, again emphasizing that Bitcoin is a virtual commodity and not a currency. In September 2017, the boom of initial coin offerings (ICOs) led to the publishing of a separate notice titled “Notice on Preventing Financial Risk of Issued Tokens”. Soon after, ICOs were banned and Chinese exchanges were investigated and eventually closed. (Hindsight is 20/20, they have made the right decision to ban ICOs and stop senseless gambling). Another blow was dealt to China’s cryptocurrency community in January 2018 when mining operations faced serious crackdowns, citing excessive electricity consumption." , cover_img_url: "https://blog.giantswarm.io/assets/2015/04/Wikimedia_Servers-small.jpg")
 
-Article.create(title: "Are high US healthcare costs just an illusion?" , body: "Readers of American Nations often ask if something changed with regard to the regional cultures to allow the 2016 Republican nominee, Donald Trump, to capture the Electoral College votes of several key “blue” and swing states and, thus, the White House.
+Article.create(user_id: user1.id, title: "Are high US healthcare costs just an illusion?" , body: "Readers of American Nations often ask if something changed with regard to the regional cultures to allow the 2016 Republican nominee, Donald Trump, to capture the Electoral College votes of several key “blue” and swing states and, thus, the White House.
 
 The answer, which initially surprises many, is no. Voting behaviors among the 11 “nations” I identify in the book actually corresponded to what one would have expected. The critical difference wasn’t that some regional cultures had suddenly become “more conservative” or “less liberal,” whatever those terms are supposed to mean these days. What changed was the political program offered by the Republican nominee, who promised the most communitarian-minded agenda of any such nominee in the past four decades. His complete reversal of those promises will likely allow Democrats to roll back his gains in the very places that proved decisive last time around.
 
@@ -42,10 +44,10 @@ Here’s what happened in 2016, as seen through the lens of America’s regional
 
 First, the top-line results: Just as one would expect, the more communitarian-minded candidate—Hillary Clinton, in this election—won Left Coast, New Netherland, and Yankeedom by wide margins. Like her Democratic predecessor, Clinton also had a wide margin of victory in Tidewater and El Norte, two onetime swing regions that have, for differing reasons, become reliable members of the “blue” coalition over the past 15 years. She also captured the southernmost part of Florida, which is part of a wider Spanish Caribbean regional culture that (like Hawaii and Newfoundland) is not treated in American Nations. In almost all of these “nations,” Clinton actually matched or outperformed Barack Obama’s 2012 results.", cover_img_url: "https://cdn-images-1.medium.com/max/800/1*52Uhc6GsR45RoYK5QJM1Qg.png")
 
-Article.create(title: "How to Make a Website", body: "First, you need a domain and a name. Then, you need content to fill up the website with. Lastly, you must join AppAcademy.",
+Article.create(user_id: user1.id, title: "How to Make a Website", body: "First, you need a domain and a name. Then, you need content to fill up the website with. Lastly, you must join AppAcademy.",
 cover_img_url: "https://cdn.lynda.com/course/83603/83603-636216266356158373-16x9.jpg")
 
-Article.create(title: "The Ten Commandments", body: "You shall have no other gods before Me.
+Article.create(user_id: user1.id, title: "The Ten Commandments", body: "You shall have no other gods before Me.
 You shall not make idols.
 You shall not take the name of the LORD your God in vain.
 Remember the Sabbath day, to keep it holy.
