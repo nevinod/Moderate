@@ -17,6 +17,11 @@ const logoutCurrentUser = () => ({
   type: LOGOUT_CURRENT_USER
 });
 
+export const receiveErrors = errors => ({
+  type: RECEIVE_SESSION_ERRORS,
+  errors
+});
+
 export const createNewUser = formUser => dispatch => signup(formUser)
   .then(user => dispatch(receiveCurrentUser(user)))
 

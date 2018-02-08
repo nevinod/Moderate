@@ -77,6 +77,18 @@ class Signin extends React.Component {
     this.props.history.push('/')
   }
 
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
 
 
   render() {
@@ -94,6 +106,7 @@ class Signin extends React.Component {
             <h2 ref={subtitle => this.subtitle = subtitle}></h2>
             <button className="x-button" onClick={this.closeModal}>&times;</button>
             <h3 className="signup-signin-header">Sign in with email</h3>
+            {this.renderErrors()}
 
               <form className = "credential-form">
                 <label class="input-title" >Username
