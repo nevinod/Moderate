@@ -108,7 +108,7 @@ class Signin extends React.Component {
 
             <h2 ref={subtitle => this.subtitle = subtitle}></h2>
             <button className="x-button" onClick={this.closeModal}>&times;</button>
-            <h3 className="signup-signin-header">Sign in with email</h3>
+            <h3 className="signup-signin-header">Sign in</h3>
             <div className='error-render'>
               {this.renderErrors()}
             </div>

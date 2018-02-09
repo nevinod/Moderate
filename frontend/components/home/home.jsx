@@ -14,6 +14,7 @@ class Home extends React.Component {
 
   render() {
     if(this.props.currentUser) {
+      console.log(this.props.currentUser.username);
       return (
         <div>
           <div className="home">
@@ -21,6 +22,20 @@ class Home extends React.Component {
               <h1 className="web-title">Moderate</h1>
               <div className="home-page-buttons">
                 <button className="home-signup-button" onClick={this.props.signOut}>Leave</button>
+              </div>
+            </div>
+            <div className="container-container">
+              <div className="article-index-temp">
+                <h1>What's Popular</h1>
+                <br></br>
+              </div>
+              <div className="welcome">
+                <div className="welcome-wtwo">
+                  <h3 className="welcome-words-two">Welcome to</h3>
+                  <h3 className="welcome-words-two">Moderate,</h3>
+                  <h3 className="welcome-words-two">{this.props.currentUser.username}</h3>
+                </div>
+                <img className="welcome-image-loggedin" src="https://cdn-images-1.medium.com/max/500/1*7HPP-1kyq-BS-Df2x9KlNw.jpeg" />
               </div>
             </div>
           </div>

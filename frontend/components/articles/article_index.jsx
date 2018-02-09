@@ -18,7 +18,6 @@ class ArticleIndex extends React.Component {
 
           <div className="container-container">
             <div className="article-index-temp">
-              <h1>Recommended for You</h1>
               <br></br>
             </div>
             <Link className="new-article-button" to="/articles/new">Write an Article!</Link>
