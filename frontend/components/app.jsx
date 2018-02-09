@@ -7,8 +7,6 @@ import SigninContainer from './session/signin_container'
 import { AuthRoute } from  '../util/route_util'
 import ArticleFormContainer from './articles/article_form_container'
 import ArticleShowContainer from './articles/article_show_container'
-import CommentFormContainer from './comments/comment_form_container'
-import CommentIndexContainer from './comments/comment_index_container'
 
 
 export default () => (
@@ -20,8 +18,6 @@ export default () => (
     <Route exact path='/signup' component={HomeContainer} />
     <AuthRoute path='/login' component={SigninContainer} />
     <Route exact path='/login' component={HomeContainer} />
-    <Route exact path='/articles/:articleId' component={CommentIndexContainer} />
-    <Route exact path='/articles/:articleId' component={CommentFormContainer} />
 
     <Switch>
       <Route exact path='/articles/new' component={ArticleFormContainer} />

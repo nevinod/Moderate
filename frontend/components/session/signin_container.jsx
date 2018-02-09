@@ -7,7 +7,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  signIn: formUser => dispatch(signIn(formUser))
+  signIn: formUser => dispatch(signIn(formUser)),
+  clearErrors: () => dispatch(receiveErrors([]))
 })
 
 export default connect(

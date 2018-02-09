@@ -26,7 +26,9 @@ export const createNewUser = formUser => dispatch => signup(formUser)
   .then(user => dispatch(receiveCurrentUser(user)))
 
 export const signIn = formUser => dispatch => login(formUser)
-  .then(user => dispatch(receiveCurrentUser(user)))
+  .then(user => (dispatch(receiveCurrentUser(user))),
+  err => (dispatch(receiveErrors(err.responseJSON)))
+)
 
 export const signOut = () => dispatch => logout()
   .then(() => dispatch(logoutCurrentUser()))

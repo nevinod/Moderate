@@ -3,12 +3,14 @@ class Api::CommentsController < ApplicationController
   before_action :require_login, only: [:create]
 
   def index
-    @articles = Comment.where(:article_id => params[:id])
+    @comments = Comment.where(:article_id => params[:id])
   end
 
   def create
     @comment = Comment.new(comment_params)
-    if @comment.save
+    @comment.user = current_user
+    @comment.article = Article.find_by(id: params[:articleId])
+    if @comment.save!
       render :show
     else
       render json: @comment.errors.full_messages, status: 422

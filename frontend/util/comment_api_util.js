@@ -2,21 +2,21 @@
 export const fetchComments = () => {
   return $.ajax({
     method: "GET",
-    url: "api/comments"
+    url: `api/articles/${articleId}/comments`
   })
 }
 
-export const createComment = comment => {
+export const createComment = (comment, articleId) => {
   return $.ajax({
     method: "POST",
-    url: "api/comments",
-    data: { comment }
+    url: `api/articles/${articleId}/comments`,
+    data: { comment, articleId }
   })
 }
 
-export const deleteArticle = id => {
+export const deleteComment = id => {
   return $.ajax({
     method: "DELETE",
-    url: `api/comments/${id}`
+    url: `api/articles/${articleId}/comments/${id}`
   })
 }

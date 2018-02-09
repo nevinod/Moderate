@@ -5,7 +5,10 @@ Rails.application.routes.draw do
       resources :likes, only: [:create, :destroy, :show, :index]
     end
     resource :session, only: [:create, :destroy]
-    resources :articles, only: [:create, :show, :update, :destroy, :index]
+    resources :articles, only: [:create, :show, :update, :destroy, :index] do
+      resources :comments, only: [:create, :index, :destroy]
+    end
+
   end
   root "static_pages#root"
 end

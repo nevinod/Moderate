@@ -261,16 +261,17 @@
 
 .show-title {
   font-family: 'PT Sans', sans-serif;
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 700;
   margin-top: 25px;
 }
 
 .show-body {
   font-family: 'Open Sans', sans-serif;
-    font-size: 24px;
+    font-size: 21px;
     font-weight: 300;
     margin-top: 20px;
+    line-height: 1.5;
 
 }
 
@@ -294,4 +295,34 @@
   border-radius: 5px;
   font-family: 'Lato', sans-serif;
 
+}
+
+.error-render {
+  position: absolute;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  margin-left: 15px;
+
+}
+
+.comment-form {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-family: 'Lato', sans-serif;
+
+}
+
+.add-comment-button {
+  padding: 3px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+}
+
+.comment-input {
+  border-bottom: 1px solid gray;
+  margin-right: 10px;
+  width: 500px;
+  font-family: 'Lato', sans-serif;
 }
