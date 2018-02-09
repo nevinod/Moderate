@@ -11,7 +11,7 @@ Moderate is a full-stack web application modeled after Medium. It uses a Rails b
 
 Any user can navigate to the home page and read any of the articles listed. These articles are retreived by the `ArticlesController` which performs a database query of the `articles` table. However, a user will need to sign in or create an account to publish their own articles or leave a comments on other article. The login and sign up buttons are located in the top right of the home page and each button renders a modal form which takes in the user information and generates either a `POST` or `GET` to the `users` table in the backend.
 
-![](https://image.ibb.co/m8YMfc/final_login_demo.gif "Logo Title Text 1")
+![](https://image.ibb.co/m8YMfc/final_login_demo.gif "Login")
 
 ### Articles
 
@@ -19,7 +19,7 @@ Once signed in, a user has the ability to publish their own articles, or to view
 
 Back on the homepage, a button in the top left allows users to write and article, and renders the `ArticleForm` when clicked. The form accepts a title, body, and image url, and when submitted will immediately display the new article, as well as add it to the `articles` table.
 
-![](https://media.giphy.com/media/l4pTqSb3kS2mb1Vfi/giphy.gif "Logo Title Text 1")
+![](https://media.giphy.com/media/3o6nV1ap07HHNh9VG8/giphy.gif "Publish")
 
 
 
