@@ -65,7 +65,8 @@ class ArticleForm extends React.Component {
                   value={this.state.cover_img_url}
                   className="create-input-body-and-image"
                   onChange={this.update('cover_img_url')}
-                  placeholder="Image URL" />
+                  placeholder="Image URL"
+                  wrap="soft" />
               </label>
 
               <input type="submit" className="create-article-button" value={text} />

@@ -32,7 +32,15 @@ class ArticleShow extends React.Component {
   }
 
   render()  {
+
     const article = this.props.article
+    if(article === undefined) {
+      return null
+    }
+    const body = this.props.article.body.split("\n").map(
+      (line, idx) => <div key={line + idx}><p className="show-body">{line}</p><br /></div>
+    )
+    // debugger
     if (this.props.currentUser) {
       return (
         <div className="show-page">
@@ -42,7 +50,7 @@ class ArticleShow extends React.Component {
 
           <img className="show-image" src={article.cover_img_url}></img>
           <p className="show-title">{article.title}</p>
-          <p className="show-body">{article.body}</p>
+          {body}
           <div className="comments-list">
           <CommentIndexContainer comments={this.props.comments} />
           </div>

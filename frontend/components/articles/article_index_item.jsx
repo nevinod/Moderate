@@ -8,7 +8,9 @@ const ArticleIndexItem = ({article, deleteArticle, blurb}) => (
       <Link className = "article-preview-title" to={`/articles/${article.id}`}>{article.title}</Link>
       <p className="article-preview-body">{`${blurb}...`}</p>
     </div>
-    <img className="index-item-image" src={`${article.cover_img_url}`} />
+    <div className="image-box">
+      <img className="index-item-image" src={`${article.cover_img_url}`} />
+    </div>
     {/*<button onClick={() => deleteArticle(article.id)}>Delete</button>*/}
 
   </li>
