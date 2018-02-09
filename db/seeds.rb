@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Article.delete_all
+User.delete_all
+Comment.delete_all
+
 user1 = User.create!(username: "prich", email: "gmail.com", password: "123456")
 
 Article.create(user_id: user1.id, title: "Winners and Losers of the NBA Trade Deadline",
