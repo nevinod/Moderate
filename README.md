@@ -23,7 +23,7 @@ Back on the homepage, a button in the top left allows users to write and article
 
 ### Challenges
 
-In my `ArticleIndexItem`, the square container that is displayed for each article on the home page, I found it dfficult to display only the first few words of the article. Eventually I used the following code to pass on the short 'blurb' as a prop to each `ArticleIndexItem`.
+In my `ArticleIndexItem`(the rectangular container that is displayed for each article on the home page), I found it dfficult to display only the first few words of the article. Eventually I used the following code to pass on the short 'blurb' as a prop to each `ArticleIndexItem`.
 
 ```Javascript
         this.props.articles.map(article => (
