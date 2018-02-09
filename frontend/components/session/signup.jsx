@@ -87,30 +87,30 @@ class Signup extends React.Component {
           <button className="x-button" onClick={this.closeModal}>&times;</button>
           <h3 className="signup-signin-header">Join Medium</h3>
             <form className="credential-form">
-              <label class="input-title">Username
+              <label className="input-title">Username
                 <input
                   type="text"
                   value={this.state.username}
                   onChange={this.handleInput('username')}
-                  class="signin-login-input-box"
+                  className="signin-login-input-box"
                 />
               </label>
 
-              <label class="input-title">Email
+              <label className="input-title">Email
                 <input
                   type="text"
                   value={this.state.email}
                   onChange={this.handleInput('email')}
-                  class="signin-login-input-box"
+                  className="signin-login-input-box"
                 />
               </label>
 
-              <label class="input-title">Password
+              <label className="input-title">Password
                 <input
                   type="password"
                   value={this.state.password}
                   onChange={this.handleInput('password')}
-                  class="signin-login-input-box"
+                  className="signin-login-input-box"
                 />
               </label>
               <button className="submit-signin-signup-button" onClick={this.handleSubmit}>Create Account</button>

@@ -76,6 +76,10 @@ class Signin extends React.Component {
     this.props.history.push('/')
   }
 
+  componentDidMount(){
+    Modal.setAppElement('#root');
+  }
+
   componentWillUnmount() {
     this.props.clearErrors()
   }
@@ -114,19 +118,19 @@ class Signin extends React.Component {
             </div>
 
               <form className = "credential-form">
-                <label class="input-title" >Username
-                  <div class="wrapper">
+                <label className="input-title" >Username
+                  <div className="wrapper">
                     <input
                       type="text"
                       value={this.state.username}
                       onChange={this.handleInput('username')}
                       className="signin-login-input-box"
                     />
-                    <span class="underline"></span>
+                  <span className="underline"></span>
                   </div>
                 </label>
 
-                <label class="input-title">Password
+                <label className="input-title">Password
                   <input
                     type="password"
                     value={this.state.password}
