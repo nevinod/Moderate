@@ -19,8 +19,8 @@ export const removeComment = commentId => ({
   commentId
 })
 
-export const fetchComments = () => dispatch => (
-  APIUtil.fetchComments().then(comments => dispatch(receiveComments(comments)))
+export const fetchComments = (articleId) => dispatch => (
+  APIUtil.fetchComments(articleId).then(comments => dispatch(receiveComments(comments)))
 )
 
 export const createComment = (comment, articleId) => dispatch => (

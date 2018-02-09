@@ -5,11 +5,11 @@ import CommentIndex from './comment_index';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
-  comments: Object.values(state.entities.comments)
+  // comments: Object.values(state.entities.comments)
 })
 
 const mapDispatchToProps = dispatch => ({
-  fetchComments: () => dispatch(fetchComments()),
+  fetchComments: (articleId) => dispatch(fetchComments(articleId)),
   deleteComment: articleId => dispatch(deleteArticle(articleId))
 })
 

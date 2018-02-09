@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class ArticleForm extends React.Component {
   constructor(props) {
@@ -26,6 +27,14 @@ class ArticleForm extends React.Component {
     const text = "Create Article"
       return (
         <div>
+          <div className="home">
+            <div className="all-header-elements">
+              <h1 className="web-title">Moderate</h1>
+                <div className="home-page-buttons">
+                  <Link className="home-signup-button" to='/articles'>Back</Link>
+                </div>
+            </div>
+          </div>
 
 
           <form className="create-article-form" onSubmit={this.handleSubmit}>

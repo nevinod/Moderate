@@ -18,7 +18,9 @@ class CommentForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
     let temp = this.props.articles
-    this.props.createComment(this.state, this.props.articles[0].id).then((arg) => this.props.history.push(`/articles/${arg.article.id}`))
+    // debugger
+    this.props.createComment(this.state, this.props.match.params.articleId)
+    // .then((arg) => this.props.history.push(`/articles/${arg.article.id}`))
   }
 
   render() {

@@ -7,17 +7,19 @@ class CommentIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchComments()
+    // this.props.fetchComments()
   }
 
   render() {
+    if (this.props.comments === undefined) return null;
     return (
       <div>
         {
           this.props.comments.map(comment => (
             <CommentIndexItem
               key={comment.id}
-              comment={comment} />
+              comment={comment}
+               username={this.props.username}/>
           ))
         }
       </div>
