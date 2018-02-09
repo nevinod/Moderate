@@ -19,6 +19,10 @@ Once signed in, a user has the ability to publish their own articles, or to view
 
 Back on the homepage, a button in the top left allows users to write and article, and renders the `ArticleForm` when clicked. The form accepts a title, body, and image url, and when submitted will immediately display the new article, as well as add it to the `articles` table.
 
+![](https://media.giphy.com/media/l4pTqSb3kS2mb1Vfi/giphy.gif "Logo Title Text 1")
+
+
+
 ## Planned Features
 
 ### Infinite Scroll
