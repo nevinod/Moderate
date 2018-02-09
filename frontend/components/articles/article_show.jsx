@@ -45,7 +45,10 @@ class ArticleShow extends React.Component {
       return (
         <div className="show-page">
           <div className="show-buttons">
-            <Link className="link-to-index" to="/articles">Back to all articles</Link>
+            <h1 className="web-title">Moderate</h1>
+              <div className="home-page-buttons">
+                <Link className="home-signup-button" to='/articles'>Back</Link>
+              </div>
           </div>
 
           <img className="show-image" src={article.cover_img_url}></img>
@@ -64,12 +67,15 @@ class ArticleShow extends React.Component {
       return (
         <div className="show-page">
           <div className="show-buttons">
-            <Link className="link-to-index" to="/articles">Back to all articles</Link>
+            <h1 className="web-title">Moderate</h1>
+              <div className="home-page-buttons">
+                <Link className="home-signup-button" to='/articles'>Back</Link>
+              </div>
           </div>
 
           <img className="show-image" src={article.cover_img_url}></img>
           <p className="show-title">{article.title}</p>
-          <p className="show-body">{article.body}</p>
+          {body}
           <div className="comments-list">
             <CommentIndexContainer comments={this.props.comments} />
           </div>
