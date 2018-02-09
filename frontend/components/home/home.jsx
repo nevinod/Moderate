@@ -44,7 +44,16 @@ class Home extends React.Component {
               <h1>What's Popular</h1>
               <br></br>
             </div>
+            <div className="welcome">
+              <div className="welcome-w">
+                <h3 className="welcome-words">Welcome to Moderate,</h3>
+                <h3 className="welcome-words-two">where words </h3>
+                <h3 className="welcome-words-two">matter </h3>
+              </div>
+              <img className="welcome-image" src="https://cdn-images-1.medium.com/max/500/1*7HPP-1kyq-BS-Df2x9KlNw.jpeg" />
+            </div>
             <Link className="new-article-button" to="/login">Sign in to Write an Article!</Link>
+
             <ul className="container">
               {
                 this.props.articles.map(article => (

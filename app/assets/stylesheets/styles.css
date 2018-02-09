@@ -356,3 +356,34 @@
   overflow: hidden;
   height: 242px;
 }
+
+.welcome {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.welcome-image {
+  height: 60%;
+  width: 60%;
+  /* margin-left: 50px; */
+}
+
+.welcome-words {
+  font-size: 60px;
+  /* line-height: 2; */
+
+}
+
+.welcome-words-two {
+  font-size: 60px;
+  margin-top: -60px;;
+
+}
+
+.welcome-w {
+  display: flex;
+  flex-direction: column;
+  margin-right: -240px;
+  text-align: left;
+}
