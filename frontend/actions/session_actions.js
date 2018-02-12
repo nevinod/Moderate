@@ -32,3 +32,5 @@ export const signIn = formUser => dispatch => login(formUser)
 
 export const signOut = () => dispatch => logout()
   .then(() => dispatch(logoutCurrentUser()))
+
+  

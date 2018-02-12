@@ -14,7 +14,6 @@ class Home extends React.Component {
 
   render() {
     if(this.props.currentUser) {
-      console.log(this.props.currentUser.username);
       return (
         <div>
           <div className="home">

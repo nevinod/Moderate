@@ -1,5 +1,6 @@
 import React from 'react'
 import Modal from 'react-modal'
+import { Link, withRouter } from 'react-router-dom';
 
 const customStyles = {
   overlay: {
@@ -59,6 +60,10 @@ class Signin extends React.Component {
     e.preventDefault()
     this.props.signIn({username: "prich", password: "123456"})
       .then(() => this.props.history.push('/articles'))
+  }
+
+  componentWillMount() {
+      Modal.setAppElement('body');
   }
 
 
@@ -149,4 +154,4 @@ class Signin extends React.Component {
   }
 }
 
-export default Signin
+export default withRouter(Signin)

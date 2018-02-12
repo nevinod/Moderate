@@ -3,6 +3,7 @@ import { signIn, receiveErrors } from '../../actions/session_actions'
 import Signin from './signin'
 
 const mapStateToProps = (state) => ({
+    loggedIn: Boolean(state.session.currentUser),
     errors: state.errors.session
 });
 

@@ -57,6 +57,10 @@ class Signup extends React.Component {
       .then(() => this.props.history.push('/articles'))
   }
 
+  componentWillMount() {
+      Modal.setAppElement('body');
+  }
+
 
   openModal() {
     this.setState({modalIsOpen: true});
