@@ -12,7 +12,7 @@ const customStyles = {
   },
   content : {
     position: 'abolute',
-    height: '50%',
+    height: '60%',
     width: '40%',
     marginLeft: '30%',
     marginTop: '10%',

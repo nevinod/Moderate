@@ -13,7 +13,7 @@ const customStyles = {
   },
   content : {
     position: 'abolute',
-    height: '50%',
+    height: '60%',
     width: '40%',
     marginLeft: '30%',
     marginTop: '10%',
@@ -90,15 +90,17 @@ class Signin extends React.Component {
   }
 
   renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
+    if(this.props.errors) {
+      return(
+        <ul>
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      );
+    }
   }
 
 

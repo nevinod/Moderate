@@ -26,7 +26,12 @@ module.exports = {
     path: path.join(__dirname, 'app', 'assets', 'javascripts'),
     filename: 'bundle.js'
   },
-  plugins: plugins,
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    }),
+    plugins
+  ]
   resolve: {
     extensions: ['.js', '.jsx']
   },
