@@ -58,7 +58,7 @@ class Signin extends React.Component {
 
   demoLogin(e) {
     e.preventDefault()
-    this.props.signIn({username: "prich", password: "123456"})
+    this.props.signIn({username: "demo", password: "123456"})
       .then(() => this.props.history.push('/articles'))
   }
 

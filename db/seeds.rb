@@ -10,7 +10,7 @@ Article.delete_all
 User.delete_all
 Comment.delete_all
 
-user1 = User.create!(username: "prich", email: "gmail.com", password: "123456")
+user1 = User.create!(username: "demo", email: "gmail.com", password: "123456")
 
 Article.create(user_id: user1.id, title: "Winners and Losers of the NBA Trade Deadline",
 body: "Winner: Cleveland Cavaliers
