@@ -63,7 +63,6 @@ class ArticleShow extends React.Component {
     }
     else {
       const article = this.props.article
-      // console.log(this.props);
       return (
         <div className="show-page">
           <div className="show-buttons">
