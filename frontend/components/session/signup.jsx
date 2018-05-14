@@ -61,6 +61,8 @@ class Signup extends React.Component {
       Modal.setAppElement('body');
   }
 
+  // debugger
+
 
   openModal() {
     this.setState({modalIsOpen: true});
