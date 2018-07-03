@@ -401,3 +401,7 @@
   margin-right: 0;
   text-align: left;
 }
+
+.article-preview:hover {
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.7);
+}
