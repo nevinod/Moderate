@@ -40,7 +40,7 @@ class ArticleShow extends React.Component {
     const body = this.props.article.body.split("\n").map(
       (line, idx) => <div key={line + idx}><p className="show-body">{line}</p><br /></div>
     )
-    // debugger
+    
     if (this.props.currentUser) {
       return (
         <div className="show-page">
