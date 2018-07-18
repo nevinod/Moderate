@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ArticleIndexItem = ({article, deleteArticle, blurb}) => (
   <li>
-    // <Link className = "article-preview" to={`/articles/${article.id}`}>{article.title}>*/
+    /* <Link className = "article-preview" to={`/articles/${article.id}`}>{article.title}>*/
 
     <div className = "article-preview" >
       <div className="title-body-wrapper">
