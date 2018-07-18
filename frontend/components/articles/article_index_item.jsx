@@ -13,7 +13,7 @@ const ArticleIndexItem = ({article, deleteArticle, blurb}) => (
         <img className="index-item-image" src={`${article.cover_img_url}`} />
       </div>
       {/*<button onClick={() => deleteArticle(article.id)}>Delete</button>*/}
-
+    </div>
     </Link>
   </li>
 
