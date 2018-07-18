@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ArticleIndexItem = ({article, deleteArticle, blurb}) => (
   <li>
-    /* <Link className = "article-preview" to={`/articles/${article.id}`}>{article.title}>*/
+
 
     <div className = "article-preview" >
       <div className="title-body-wrapper">
@@ -15,7 +15,7 @@ const ArticleIndexItem = ({article, deleteArticle, blurb}) => (
       <div className="image-box">
         <img className="index-item-image" src={`${article.cover_img_url}`} />
       </div>
-      {/*<button onClick={() => deleteArticle(article.id)}>Delete</button>*/}
+
     </div>
   </li>
 
@@ -23,4 +23,4 @@ const ArticleIndexItem = ({article, deleteArticle, blurb}) => (
 
 export default ArticleIndexItem;
 
-// hello
+// <Link className = "article-preview" to={`/articles/${article.id}`}>{article.title}>
