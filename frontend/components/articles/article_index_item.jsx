@@ -6,7 +6,7 @@ const ArticleIndexItem = ({article, deleteArticle, blurb}) => (
   <li>
 
 
-    <div className = "article-preview" >
+    <Link className = "article-preview" to={`/articles/${article.id}`}>{article.title}>
       <div className="title-body-wrapper">
         <div className = "article-preview-title">
           <p className="article-title-text">{article.title}</p>
@@ -18,7 +18,7 @@ const ArticleIndexItem = ({article, deleteArticle, blurb}) => (
         <img className="index-item-image" src={`${article.cover_img_url}`} />
       </div>
 
-    </div>
+    </Link>
   </li>
 
 );
