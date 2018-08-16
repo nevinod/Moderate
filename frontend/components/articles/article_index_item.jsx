@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 
 const ArticleIndexItem = ({article, deleteArticle, blurb}) => (
-  <li>
+  <li onclick="window.scrollTo(0, 0)">
 
 
-    <Link className = "article-preview" to={`/articles/${article.id}`} onclick="window.scrollTo(0, 0)">
+    <Link className = "article-preview" to={`/articles/${article.id}`} >
       <div className="title-body-wrapper">
         <div className = "article-preview-title">
           <p className="article-title-text">{article.title}</p>
