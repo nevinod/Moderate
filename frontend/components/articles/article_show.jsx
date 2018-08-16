@@ -29,6 +29,7 @@ class ArticleShow extends React.Component {
       ))
 
     }
+    window.scrollTo( 0, 0 );
   }
 
   render()  {
@@ -40,7 +41,7 @@ class ArticleShow extends React.Component {
     const body = this.props.article.body.split("\n").map(
       (line, idx) => <div key={line + idx}><p className="show-body">{line}</p><br /></div>
     )
-    
+
     if (this.props.currentUser) {
       return (
         <div className="show-page">

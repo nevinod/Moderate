@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 const ArticleIndexItem = ({article, deleteArticle, blurb}) => (
-  <li onclick="window.scrollTo(0, 0)">
+  <li >
 
 
     <Link className = "article-preview" to={`/articles/${article.id}`} >
