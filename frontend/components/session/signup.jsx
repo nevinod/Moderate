@@ -93,7 +93,7 @@ class Signup extends React.Component {
 
           <h2 ref={subtitle => this.subtitle = subtitle}></h2>
           <button className="x-button" onClick={this.closeModal}>&times;</button>
-          <h3 className="signup-signin-header">Join Medium</h3>
+          <h3 className="signup-signin-header">Join Moderate</h3>
             <form className="credential-form">
               <label className="input-title">Username
                 <input
