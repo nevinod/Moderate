@@ -1,8 +1,6 @@
 import React from 'react'
 import Modal from 'react-modal'
 
-// testing github
-
 const customStyles = {
   overlay: {
     position: 'fixed',
