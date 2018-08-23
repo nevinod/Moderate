@@ -177,6 +177,7 @@
 
 .new-container-body {
   display: flex;
+  align-items: flex-end;
 }
 
 .title-body-wrapper {
