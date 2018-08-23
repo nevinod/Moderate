@@ -175,6 +175,10 @@
   align-items: center;
 }
 
+.new-container-body {
+  display: flex;
+}
+
 .title-body-wrapper {
   display: flex;
   margin-left: 10px;
