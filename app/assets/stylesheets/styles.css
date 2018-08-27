@@ -23,6 +23,10 @@
 
 }
 
+.bottom-part {
+  height: 100px;
+}
+
 .home-signup-button {
   border: 1px;
   border-style: solid;

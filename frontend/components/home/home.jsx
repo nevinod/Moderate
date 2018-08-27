@@ -79,6 +79,7 @@ class Home extends React.Component {
               }
             </ul>
           </div>
+          <div className="bottom-part"></div>
         </div>
       )
 
