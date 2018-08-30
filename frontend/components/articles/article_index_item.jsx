@@ -25,4 +25,4 @@ const ArticleIndexItem = ({article, deleteArticle, blurb}) => (
 
 export default ArticleIndexItem;
 
-// <Link className = "article-preview" to={`/articles/${article.id}`}>{article.title}>
+// <Link className = "article-preview" to={`/articles/${article.id}`
