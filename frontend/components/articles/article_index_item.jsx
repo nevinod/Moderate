@@ -24,3 +24,5 @@ const ArticleIndexItem = ({article, deleteArticle, blurb}) => (
 );
 
 export default ArticleIndexItem;
+
+//image box
