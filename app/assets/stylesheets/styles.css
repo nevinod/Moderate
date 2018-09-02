@@ -389,7 +389,7 @@
 .welcome-w {
   display: flex;
   flex-direction: column;
-  margin-right: -240px;
+  margin-right: -24px;
   text-align: left;
 }
 
