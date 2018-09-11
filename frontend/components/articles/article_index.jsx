@@ -11,7 +11,6 @@ class ArticleIndex extends React.Component {
   }
 
   render() {
-
     if(this.props.currentUser) {
       return (
         <div>
