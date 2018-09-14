@@ -1,6 +1,6 @@
 import React from 'react'
 import ArticleIndexItem from './article_index_item';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class ArticleIndex extends React.Component {
   constructor(props) {
