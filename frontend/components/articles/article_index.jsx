@@ -45,5 +45,3 @@ class ArticleIndex extends React.Component {
 }
 
 export default ArticleIndex
-
-//test comment git
