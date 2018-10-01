@@ -86,3 +86,5 @@ class ArticleShow extends React.Component {
 }
 
 export default ArticleShow;
+
+//export
