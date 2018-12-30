@@ -35,7 +35,6 @@ class ArticleIndex extends React.Component {
       )
 
     } else {
-
       this.props.history.push('/')
       return (
         <div className="article-index-temp"></div>
